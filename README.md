@@ -31,9 +31,9 @@ App Usage Instructions:
 
 1) On Clicking the ellipsis of Action Column, option for editing the row will appear.
 2) Clicking the delete Icon  will delete the  particular row.
-3) On Click of Edit Icon you will get an option to edit the etire row and Tick icon will 
-    appear instead of epllipsis.Click on Tick button after the edit is complete.
-4) After Entering value in any field the Add button will be active which is by default Inactive.
+3) On Click of Edit Icon, you will get an option to edit the entire row and Tick icon will 
+    appear instead of epllipsis.Click on the Tick icon after the edit is complete.
+4) Entering value in any field will make Add button active which is by default Inactive.
 5) After entering the value and clicking the add button the data will be added at the top.
 
 
