@@ -1,11 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Instructions to run the project;
--Install latest version of Node.js (https://nodejs.org/en/download/).
--Go to you terminal.
--Go to the project directory and run  'npm install' command.
--Once the command is executed run 'npm start'.
--After the sucessfull build project will be opened on your default browser(http://localhost:3000).
+Instructions to run the project:
+--------------------------------
+
+1)Install latest version of Node.js (https://nodejs.org/en/download/).
+2)Go to you terminal.
+3)Go to the project directory and run  'npm install' command.
+4)Once the command is executed run 'npm start'.
+5)After the sucessfull build project will be opened on your default browser(http://localhost:3000).
+
 
 Note:Preferable browser to use is Google Chrome.
 
