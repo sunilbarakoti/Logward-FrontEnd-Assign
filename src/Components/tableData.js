@@ -47,11 +47,14 @@ const row = (x, index,handleRemove,startEditing,editIdx,handleChange,stopEditing
               return(<TableCell key={`tc-${k}`}><Badge variant="primary" className ="badgeClass">IN PROGRESS</Badge></TableCell>)
             }
           }else if(row1 === "Progress"){
-            return(<TableCell key={`tc-${k}`} ><ProgressBar variant="success" className ="progressBarClass"  now={x[row1]}/></TableCell>)
+            return(<TableCell key={`tc-${k}`} >{currentlyEditing ? (
+              <TextField type="number" name={row1} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
+            ) :(<ProgressBar variant="success" className ="progressBarClass"  now={x[row1]}/>)}
+            </TableCell>)
           }else if(row1 === "startDate" ||row1 === "releaseDate" ){
             if(x[row1] === ""){
               return(<TableCell key={`tc-${k}`} >{currentlyEditing ? (
-              <TextField name={row1} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
+              <TextField type = "date" style = {{width:'145px'}} name={row1} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
             ) : ("--")
               }
               </TableCell>)               

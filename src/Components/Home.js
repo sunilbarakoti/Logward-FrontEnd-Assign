@@ -43,7 +43,7 @@ class Home extends Component {
   render(){
   return(
     <div>
-      <div style = {{marginTop:'1.5%',marginLeft:'10%',width:'80%'}}>
+      <div style = {{marginTop:'1.5%',marginLeft:'5%',width:'90%'}}>
       <div>
         <div>
             <div className = "releaseHeading">Releases</div>

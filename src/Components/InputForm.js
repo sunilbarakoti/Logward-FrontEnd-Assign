@@ -11,7 +11,7 @@ class InputForm extends Component {
 
     render(){
     return (
-        <Formik initialValues ={{Version:'',startDate:'',releaseDate:'',Description:'',Actions:'...'}} onSubmit={(values)=>
+        <Formik initialValues ={{Version:'',Progress:'',startDate:'',releaseDate:'',Description:'',Actions:'...'}} onSubmit={(values)=>
             this.props.onSubmit(values)}>
             {({values,handleChange,handleBlur})=>(
                 <Form>
