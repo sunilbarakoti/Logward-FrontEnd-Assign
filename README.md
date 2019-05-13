@@ -2,7 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Instructions to run the project:
 --------------------------------
-
 1)Install latest version of Node.js (https://nodejs.org/en/download/).
 2)Go to you terminal.
 3)Go to the project directory and run  'npm install' command.
