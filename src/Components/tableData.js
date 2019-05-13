@@ -14,6 +14,11 @@ const rowData = ["Version","Status","Progress","startDate","releaseDate","Descri
 const row = (x, index,handleRemove,startEditing,editIdx,handleChange,stopEditing) => {
 
   const currentlyEditing = editIdx === index; 
+
+  function numberValidator(e){
+    if(e.target.value<0) e.target.value = 0;
+    if(e.target.value>100) e.target.value = 100;
+  }
   
   function actionClick(e,index){
       let showCheck = false; 
@@ -48,7 +53,7 @@ const row = (x, index,handleRemove,startEditing,editIdx,handleChange,stopEditing
             }
           }else if(row1 === "Progress"){
             return(<TableCell key={`tc-${k}`} >{currentlyEditing ? (
-              <TextField type="number" name={row1} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
+              <TextField type="number" name={row1} onInput = {(e)=>numberValidator(e)} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
             ) :(<ProgressBar variant="success" className ="progressBarClass"  now={x[row1]}/>)}
             </TableCell>)
           }else if(row1 === "startDate" ||row1 === "releaseDate" ){
