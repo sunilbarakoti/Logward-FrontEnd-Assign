@@ -14,8 +14,7 @@
   
   .myOptions{
       margin-left: -68px;
-      margin-top: -29px;
-      font-size: 1rem;
+      margin-top: -27px;
       color: #212529;
       text-align: left;
       list-style: none;
@@ -44,6 +43,7 @@
       float:left;
       margin:0 12px 0 2px;
       padding: 6px;
+      cursor: pointer;
       padding: 8px 25px 8px 25px;
       background : #90caf9 !important;
       border-radius: 0 !important;
@@ -87,5 +87,19 @@
   }
   .dropdown a:hover {background-color: #ddd;}
   .show {display: block;}
+
+  .refreshIconClass{
+      margin-top: 4px;
+      float: left;
+      cursor: pointer;
+      color: #00000042; 
+  }
+
+  .textTableCell{
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
  
   
