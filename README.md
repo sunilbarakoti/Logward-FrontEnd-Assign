@@ -35,6 +35,7 @@ App Usage Instructions:
     appear instead of epllipsis.Click on the Tick icon after the edit is complete.
 4) Entering value in any field will make Add button active which is by default Inactive.
 5) After entering the value and clicking the add button the data will be added at the top.
+6) You can click on the Releases status(IN PROGRESS,UNRELEASED,RELEASED) to filter out the particular status type.
 
 
 Packages Used:
