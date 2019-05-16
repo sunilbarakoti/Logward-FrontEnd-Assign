@@ -8,6 +8,12 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import {Badge,ProgressBar} from 'react-bootstrap';
 import Moment from 'react-moment';
+import DeleteIcon from '@material-ui/icons/DeleteSharp';
+import EditIcon from '@material-ui/icons/Edit';
+import CheckIcon from '@material-ui/icons/Check';
+
+
+
 
 const rowData = ["Version","Status","Progress","startDate","releaseDate","Description"];
 
@@ -71,7 +77,7 @@ const row = (x, index,handleRemove,startEditing,editIdx,handleChange,stopEditing
               </TableCell>)
             }
           }else{return(
-          <TableCell key={`tc-${k}`} >
+          <TableCell className = "textTableCell" key={`tc-${k}`} >
             {currentlyEditing ? (
               <TextField name={row1} onChange={(e) => handleChange(e,row1,index)} value = {x[row1]} />
             ) : (x[row1]
@@ -82,22 +88,23 @@ const row = (x, index,handleRemove,startEditing,editIdx,handleChange,stopEditing
       <TableCell key={`tcd-${index}`}
         style={{ fontWeight: 'bold', textIndent: '30%',position: 'relative' }}
         className ="dropbtn" 
-      >{currentlyEditing ? (<i className="fa fa fa-check fa-1x"
+      >{currentlyEditing ? (<CheckIcon
                           style={{ color: 'grey', marginRight: '5px',cursor: 'pointer'}}
-                          onClick= {() => (stopEditing())} >
-                         </i>) : (<span style={{cursor: 'pointer' }} onClick={(e) => actionClick(e,index)}>...</span>)}
+                          onClick= {() => (stopEditing())} />)
+                         : (<span style={{cursor: 'pointer' ,fontSize:'18px'}} onClick={(e) => actionClick(e,index)}>...</span>)}
                 <div key={index} id={`myOptions${index}`} className="dropdown-content myOptions">
           <span>
-            <i
-            className="fa fa fa-edit fa-2x"
-            style={{ color: 'grey', marginTop: '4px', marginRight: '5px', marginLeft: '5px' }}
+            <EditIcon
+            style={{ color: 'grey', fontSize:'28', marginRight: '5px', marginLeft: '5px' }}
             onClick={() => (startEditing(index),document.getElementById(`myOptions${index}`).classList.toggle("show"))}
-            ></i>
+            />
           </span>
-          <span><i className="fa fa fa-trash fa-2x"
-            style={{ color: 'red', marginRight: '5px' }}
-            onClick={() => (handleRemove(index),document.getElementById(`myOptions${index}`).classList.toggle("show"))}
-          ></i></span>
+          <span>
+            <DeleteIcon
+              style={{ color: 'red', fontSize:'28' }}
+              onClick={() => (handleRemove(index),document.getElementById(`myOptions${index}`).classList.toggle("show"))}
+            />
+          </span>
         </div>
       </TableCell>
     </TableRow>

@@ -11,11 +11,12 @@ class InputForm extends Component {
 
     render(){
     return (
-        <Formik initialValues ={{Version:'',Progress:'',startDate:'',releaseDate:'',Description:'',Actions:'...'}} onSubmit={(values)=>
+        <Formik initialValues ={{Version:'',Status:'IN PROGRESS',Progress:'',startDate:'',releaseDate:'',Description:'',Actions:'...'}} onSubmit={(values)=>
             this.props.onSubmit(values)}>
             {({values,handleChange,handleBlur})=>(
                 <Form>
                     <TextField
+                        required
                         name = "Version"
                         values = {values.Version}
                         onInput = {()=>this.setState({buttonDisState:false})}
@@ -27,6 +28,7 @@ class InputForm extends Component {
                         
                     />
                     <TextField
+                        required
                         name = "startDate"
                         values = {values.startDate}
                         onInput = {()=>this.setState({buttonDisState:false})}

@@ -3,7 +3,8 @@ import TableData from './tableData';
 import InputForm from './InputForm';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import {header,data} from './Utility';
+import {header,data,Status} from './Utility';
+import RefreshIcon from '@material-ui/icons/Refresh';
 
 class Home extends Component {
 
@@ -11,6 +12,8 @@ class Home extends Component {
     data:data ,
     editIdx : -1,
     query : '',
+    statusClicked : false,
+    currentStatusDisp : {}
   }
   
  
@@ -40,6 +43,21 @@ class Home extends Component {
     }))
 
   }
+
+  currentStatusToDisplay = (e,statusData) =>{
+    (e.target.textContent === statusData.name) &&
+      JSON.stringify(this.state.currentStatusDisp) !== JSON.stringify(statusData)
+      ? this.setState({currentStatusDisp: statusData , statusClicked: true})
+      : this.setState({currentStatusDisp: {} , statusClicked: false})
+  }
+
+  resetClick = () =>{
+    this.setState({currentStatusDisp: {} , statusClicked: false})
+  }
+
+
+
+
   render(){
   return(
     <div>
@@ -48,14 +66,15 @@ class Home extends Component {
         <div>
             <div className = "releaseHeading">Releases</div>
             <div>
-              <Paper className ="paperClass">IN PROGRESS</Paper>
-              <Paper className ="paperClass">UNRELEASED</Paper>
-              <Paper className ="paperClass">RELEASED</Paper>
+              {Status.map((statusData)=>(
+                <Paper className ="paperClass" onClick = {(e)=>this.currentStatusToDisplay(e,statusData)}>{statusData.name}</Paper>
+              ))}
+              {this.state.statusClicked && <RefreshIcon className = "refreshIconClass" onClick = {()=>this.resetClick()} />}
             </div>
         </div>
         <TextField
           name="Search"
-          value ={this.state.query.toLocaleLowerCase()}
+          value ={this.state.query.toLowerCase()}
           onChange={e=>this.setState({query:e.target.value})}
           label="Search"
           margin="dense"
@@ -71,7 +90,16 @@ class Home extends Component {
           handleChange = {this.handleChange}
           stopEditing = {this.stopEditing}
           header = {header}  
-          data = {this.state.query?this.state.data.filter(x=>(x["Version"].toLowerCase().includes(this.state.query) || x["Description"].toLowerCase().includes(this.state.query))):this.state.data}>
+          data = {
+                  this.state.query
+                    ? (Object.keys(this.state.currentStatusDisp).length >0)
+                      ? (this.state.data.filter(x=>(x["Version"].toLowerCase().includes(this.state.query) || x["Description"].toLowerCase().includes(this.state.query)))).filter(x=>(x["Status"] === this.state.currentStatusDisp.name))
+                      : this.state.data.filter(x=>(x["Version"].toLowerCase().includes(this.state.query) || x["Description"].toLowerCase().includes(this.state.query)))
+                    : (Object.keys(this.state.currentStatusDisp).length >0)
+                      ? this.state.data.filter(x=>(x["Status"] === this.state.currentStatusDisp.name))
+                      : this.state.data
+                  }
+          >
 
         </TableData>
         <Paper > 
