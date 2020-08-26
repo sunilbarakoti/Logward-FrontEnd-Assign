@@ -1,0 +1,59 @@
+.maintable {
+  margin-top: 1.5%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.maintable__filterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -8px;
+}
+
+.maintable__releases {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.maintable__releaseHeading {
+  margin: 0 0 2% 1% !important;
+}
+
+.maintable__releaseFilter {
+  display: flex;
+  align-items: center;
+}
+
+.maintable__releaseFilter-filterButton {
+  margin: 0 12px 0 2px;
+  cursor: pointer;
+  padding: 3% 20px 3% 20px !important;
+  white-space: nowrap;
+  background: #90caf9 !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  font-size: 70% !important;
+  box-shadow: none !important;
+}
+
+.maintable__releaseFilter-refreshIcon {
+  margin-top: 4px;
+  float: left;
+  cursor: pointer;
+  color: #00000042;
+}
+
+.maintable__search {
+  float: right;
+  width: 25% !important;
+  margin-bottom: -13.5px !important;
+}
+
+.maintable__hrline {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}

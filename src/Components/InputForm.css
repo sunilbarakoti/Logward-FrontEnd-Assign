@@ -1,0 +1,32 @@
+.formikForm {
+  display: flex;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.formikForm__version {
+  margin-left: 1% !important  ;
+  width: 35% !important;
+}
+
+.formikForm__startDate {
+  margin-left: 1% !important  ;
+}
+
+.formikForm__releaseDate {
+  margin-left: 1% !important;
+}
+
+.formikForm__description {
+  margin-left: 1% !important  ;
+  width: 29% !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.formikForm__formbutton {
+  margin-right: 0.5% !important;
+  width: 1% !important;
+}

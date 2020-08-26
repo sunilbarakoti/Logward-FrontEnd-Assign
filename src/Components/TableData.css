@@ -1,0 +1,84 @@
+.tableCont {
+  max-height: 442px !important;
+  overflow-y: auto !important;
+  width: auto;
+}
+
+.tableColName {
+  font-size: 0.9rem !important;
+  white-space: nowrap;
+}
+
+.tablerow__statusbar {
+  font-weight: 400;
+  padding: 7% 25% 7% 25%;
+  white-space: nowrap;
+  color: white;
+}
+
+.tablerow__progressbar {
+  height: 8px;
+  background-color: #5454ab;
+  width: 100%;
+}
+
+.tablerow__remCell {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tablerow__remCell:hover {
+  max-width: 240px;
+  overflow: visible !important;
+  white-space: unset;
+}
+
+.actionbtn {
+  font-size: 16px;
+  font-weight: bold;
+  text-indent: 30%;
+  position: relative;
+}
+
+.actionbtn__iconEdit {
+  color: grey;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.actionbtn__iconDefault {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.actionbtn__editIcon {
+  color: grey;
+  font-size: 28px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.actionbtn__deleteIcon {
+  color: red;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.actionbtn__content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.show {
+  display: inline-flex;
+}
+
+.myOptions {
+  margin-left: -92px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  min-width: 66px;
+}
