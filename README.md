@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo: 
+<p align="center">
+
+  <img src="./doc/react-shopping-cart-min.gif">
+</p>
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 Instructions to run the project:
 --------------------------------
