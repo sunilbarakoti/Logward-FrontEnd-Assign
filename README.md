@@ -1,7 +1,7 @@
 ## Demo: 
 <p align="center">
 
-  <img src="./doc/react-shopping-cart-min.gif">
+  <img src="./doc/demo.gif">
 </p>
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
