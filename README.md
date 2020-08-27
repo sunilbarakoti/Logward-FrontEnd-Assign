@@ -46,7 +46,7 @@ App Usage Instructions:
 
 Packages Used:
 --------------
-- material-ui,font-awesome,react-bootstrap,react-moment,react-router-dom,formik
+- material-ui, react-bootstrap,react-moment,react-router-dom,formik
 -For more details about version you can go to package.json
 
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './Components/Home';
-import 'font-awesome/css/font-awesome.min.css';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 function App() {
