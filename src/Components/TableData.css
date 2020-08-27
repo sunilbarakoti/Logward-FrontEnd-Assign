@@ -26,20 +26,19 @@
   max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .tablerow__remCell:hover {
-  max-width: 240px;
-  overflow: visible !important;
-  white-space: unset;
+  max-width: 150px;
+  overflow: unset;
+  overflow-wrap: break-word;
 }
 
 .actionbtn {
   font-size: 16px;
   color: grey !important;
   font-weight: bold !important;
-  text-indent: 30%;
+  text-indent: 24%;
   position: relative;
   padding-bottom: 13px !important;
 }
